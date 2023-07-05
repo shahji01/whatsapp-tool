@@ -1,3 +1,4 @@
+.wweb_auth
 node_modules
 env
-web/node_modules
+/web/node_modules

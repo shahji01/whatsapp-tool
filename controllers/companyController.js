@@ -176,7 +176,7 @@ const createCompany = async (req, res) => {
         invalidUrls.push('allowedUrl')
     }
 
-    if (emptyFields.length > 0) {
+    if (invalidUrls.length > 0) {
         return res.status(400).json({status: 400,error : 'Must be a valid URL', invalidUrls})
     }
 

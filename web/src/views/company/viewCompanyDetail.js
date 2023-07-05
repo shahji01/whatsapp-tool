@@ -50,8 +50,6 @@ const companyDetail = (props) => {
                             <th class="text-center">Name</th>
                             <th class="text-center">Phone</th>
                             <th class="text-center">Status</th>
-                            <th class="text-center">Send Message</th>
-                            <th class="text-center">Remaining Message</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,17 +60,6 @@ const companyDetail = (props) => {
                                 <td>{instanceDetail?.name}</td>
                                 <td class="text-center">{instanceDetail?.phone}</td>
                                 <td class="text-center">{instanceDetail.status ? ('Connected') : ('Disconnected')}</td>
-                                <td class="text-center">
-                                    {/* {
-                                        filtered = companyDetails[0]?.messageDetail?.filter(msgDetail => (
-                                            msgDetail?.['instanceId'] === instanceDetail?._id
-                                        ))
-                                    }
-                                    {
-                                        companyDetails[0]?.messageDetail.length
-                                    } */}
-                                </td>
-                                <td class="text-center"></td>
                             </tr>  
                         ))
                     }  

@@ -1,2 +1,3 @@
-2023/07/05-11:48:30.561 32a4 Creating DB /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/Local Storage/leveldb since it was missing.
-2023/07/05-11:48:30.565 32a4 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/Local Storage/leveldb/MANIFEST-000001
+2023/07/05-12:50:38.159 6280 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/Local Storage/leveldb/MANIFEST-000001
+2023/07/05-12:50:38.159 6280 Recovering log #3
+2023/07/05-12:50:38.159 6280 Reusing old log /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/Local Storage/leveldb/000003.log 
