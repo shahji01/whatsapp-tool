@@ -1,0 +1,7 @@
+2023/07/05-11:48:32.060 3297 Creating DB /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64998d2a4c2f3664d26fa8aa/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2023/07/05-11:48:32.065 3297 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64998d2a4c2f3664d26fa8aa/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/05-11:48:32.412 3298 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/07/05-11:48:36.082 32ee Level-0 table #5: started
+2023/07/05-11:48:36.091 32ee Level-0 table #5: 26922 bytes OK
+2023/07/05-11:48:36.093 32ee Delete type=0 #3
+2023/07/05-11:48:36.093 32f2 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)
