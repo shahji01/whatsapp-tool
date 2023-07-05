@@ -1,0 +1,122 @@
+[
+  {
+    "name": "asdfasdf",
+    "messagesAllowed": 23,
+    "price": {
+      "monthly": 2,
+      "quaterly": 22,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "discount": {
+      "monthly": 2,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "_id": "6492e87990f1d7f8e87eb782",
+    "createdAt": "2023-06-21T12:09:29.174Z",
+    "updatedAt": "2023-06-21T12:09:29.174Z",
+    "__v": 0
+  },
+  {
+    "name": "asdf",
+    "messagesAllowed": 234,
+    "price": {
+      "monthly": 2,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "discount": {
+      "monthly": 2,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 1
+    },
+    "_id": "6492f86f4b75e01b5540f3c1",
+    "createdAt": "2023-06-21T13:17:35.234Z",
+    "updatedAt": "2023-06-21T13:17:35.234Z",
+    "__v": 0
+  },
+  {
+    "name": "Standard Package\t",
+    "messagesAllowed": 3,
+    "price": {
+      "monthly": 1,
+      "quaterly": 1,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "discount": {
+      "monthly": 2,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "_id": "64930689c8a0c294157f09a6",
+    "createdAt": "2023-06-21T14:17:45.344Z",
+    "updatedAt": "2023-06-21T14:17:45.344Z",
+    "__v": 0
+  },
+  {
+    "name": "Standard Packagensrs",
+    "messagesAllowed": 3,
+    "price": {
+      "monthly": 3,
+      "quaterly": 3,
+      "halfyearly": 3,
+      "yearly": 3
+    },
+    "discount": {
+      "monthly": 13,
+      "quaterly": 3,
+      "halfyearly": 3,
+      "yearly": 3
+    },
+    "_id": "6493076493f76344ab6c2990",
+    "createdAt": "2023-06-21T14:21:24.569Z",
+    "updatedAt": "2023-06-21T14:21:24.569Z",
+    "__v": 0
+  },
+  {
+    "name": "Testing Package",
+    "messagesAllowed": 2,
+    "price": {
+      "monthly": 1,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "discount": {
+      "monthly": 12,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "_id": "649a94cec4218e477f8bc52e",
+    "createdAt": "2023-06-27T07:50:38.847Z",
+    "updatedAt": "2023-06-27T07:50:38.847Z",
+    "__v": 0
+  },
+  {
+    "name": "Standard Package Two",
+    "messagesAllowed": 23,
+    "price": {
+      "monthly": 23,
+      "quaterly": 2,
+      "halfyearly": 23,
+      "yearly": 2
+    },
+    "discount": {
+      "monthly": 2,
+      "quaterly": 2,
+      "halfyearly": 2,
+      "yearly": 2
+    },
+    "_id": "64a2e8ac629c74dcce808c52",
+    "createdAt": "2023-07-03T15:26:36.233Z",
+    "updatedAt": "2023-07-03T15:26:36.233Z",
+    "__v": 0
+  }
+]

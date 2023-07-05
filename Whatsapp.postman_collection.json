@@ -1,0 +1,889 @@
+{
+	"info": {
+		"_postman_id": "1cf5f70d-7201-42fd-95fc-d867d6a3d2da",
+		"name": "Whatsapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "Get All Companies",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"host": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/companies",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/companies/64916d0315fcb42618d196ca",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"64916d0315fcb42618d196ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company Detail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"load\": 15,\n    \"reps\":645 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/companies/640cc2db4944c54b6da18d52",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"640cc2db4944c54b6da18d52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Company One\",\n    \"userAllowed\": 3, \n    \"packageId\": \"648b0d8f77ff7954bae01d2b\", \n    \"allowedUrl\": \"http://localhost/\",             \n    \"webhook\": \"http://localhost:9516/api/message/updateMsgStatus\",\n    \"email\":\"ushahfaisalrantaTwo@gmail.com\",\n    \"password\":\"123CompanyOne@\",\n    \"type\":\"Company\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/companies/",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Company",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/companies/643b1a2414d73e7de1b2dd05",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"643b1a2414d73e7de1b2dd05"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company Detail With Msg Summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/companies/getDetailWithMsgSummary/646dee53a2459b969bea1fe8",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"getDetailWithMsgSummary",
+								"646dee53a2459b969bea1fe8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Company Instance List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/companies/companyInstance/64916d0315fcb42618d196ca",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"companyInstance",
+								"64916d0315fcb42618d196ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Instance In Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\":\"6492ce15cd6f5f2917aa845e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/companies/addInstance",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"addInstance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "Send Message",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDkxNmQwMzE1ZmNiNDI2MThkMTk2Y2IiLCJpYXQiOjE2ODcyNTIyMjh9.Gel9_jMyoEwisbl1KMtS7NdIZEpxQ_fIGl_uccV-sdE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://test.arwaj.com.pk:8085/qa",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"recipient\": \"923145017055\",\n        \"message\": \"Msg One\", \n        \"referenceNumber\": \"155\"\n    },\n    {\n        \"recipient\": \"923145017055\",\n        \"message\": \"Msg Two\", \n        \"referenceNumber\": \"155\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/message",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Last Msg Users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{HOST}}/api/message/sendUserMessage",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"message",
+								"sendUserMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Webhook Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/message/sendWebhookMessage",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"message",
+								"sendWebhookMessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instance Wise Msg List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDkyY2UxNWNkNmY1ZjI5MTdhYTg0NWYiLCJpYXQiOjE2ODczNDI2MTR9.SsYZUhl_WbNTG8CTcCd4sRUIJdL04_hOjlkw0ocES9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/message/instanceWiseMsgList",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"message",
+								"instanceWiseMsgList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileName",
+									"type": "file",
+									"src": "/home/dell/module_table_top.png"
+								},
+								{
+									"key": "id",
+									"value": "923145017055",
+									"type": "text"
+								},
+								{
+									"key": "caption",
+									"value": "sdafasdfasd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/message/send-image",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"message",
+								"send-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "packages",
+			"item": [
+				{
+					"name": "Get All Packages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/packages",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Package",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Basic\",\n    \"messagesAllowed\": 500,\n    \"price\":{\n        \"monthly\": 500,\n        \"quaterly\": 400, \n        \"halfyearly\": 350, \n        \"yearly\": 300\n    }, \n    \"discount\":{\n        \"monthly\": 0,\n        \"quaterly\": 100, \n        \"halfyearly\": 150, \n        \"yearly\": 200\n    } \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/packages",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Package",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"load\": 15,\n    \"reps\":645 \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/packages/640cc2db4944c54b6da18d52",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"packages",
+								"640cc2db4944c54b6da18d52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/packages/648b0d8f77ff7954bae01d2b",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"packages",
+								"648b0d8f77ff7954bae01d2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Package",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/packages/646ef50c16f2ab451b17f17e",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"packages",
+								"646ef50c16f2ab451b17f17e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Company Three\",\n    \"userAllowed\": 3, \n    \"packageId\": \"646ef4f4885566433d51565c\", \n    \"allowedUrl\": \"http://localhost/\",             \n    \"webhook\": \"http://localhost:9516/api/message/updateMsgStatus\",\n    \"email\":\"ushahfaisalrantaOne@gmail.com\",\n    \"password\":\"123CompanyOne@\",\n    \"type\":\"Company\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password With Otp",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ushahfaisalranta@gmail.com\",\n    \"otpCode\":\"866994\",\n    \"password\":\"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/change-password-with-otp",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"change-password-with-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ushahfaisalranta@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/forgetPassword",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ushahfaisalranta@gmail.com\",\n    \"password\":\"123HelloAbc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/change-password",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZlZThlNDZhZGYxOTIzYWJlZjdmMWUiLCJpYXQiOjE2ODY3NDA3NTQsImV4cCI6MTY4NjgyNzE1NH0.VaZFPyGEgFnfAn8OyhEitRXpfNbhvBN83YFLZeJ88sY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/user/logout",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "Group List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/groups/group-list",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"group-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Msg Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\":\"Testing One Two Three\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/groups/send-msg-group/Learning VUE js",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"send-msg-group",
+								"Learning VUE js"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Participant in Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\":\"Learning VUE js\",\n    \"contactName\":\"Sajjad Plain Coach\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/groups/add-participant-in-group",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"add-participant-in-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Participant in Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\":\"Learning VUE js\",\n    \"contactName\":\"Sajjad Plain Coach\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/groups/remove-participant-in-group",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"remove-participant-in-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\":\"Whatsapp Group Name News\",\n    \"contactName\":\"Sajjad Plain Coach\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/groups/create-group",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"create-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDZkZWU1M2EyNDU5Yjk2OWJlYTFmZTkiLCJpYXQiOjE2ODQ5MjYwMzZ9.el0B385mRgip-VnmA8pFpTsc-silKLJ_QXR5Pt27lwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\":\"Whatsapp Group Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/api/groups/remove-group",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"groups",
+								"remove-group"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:9516"
+		},
+		{
+			"key": "SERVER",
+			"value": "http://142.93.166.222:9515",
+			"type": "string"
+		}
+	]
+}
