@@ -44,8 +44,12 @@ const InstantList = () => {
   },[]);
 
   const disconectInstance = (token) => {
-    alert(token)
-    // var socket = io.connect( baseUrlTwo ,{query:'token='+token});
+    //var socket = io.connect( baseUrlTwo ,{query:'token='+token});
+    // console.log(io.on('disconnect'));
+    // io.on('disconnect', () => {
+    //     console.log('Disconnected');
+    //     //onDisconnect();
+    // });
   }
 
   const openInnerPagesInstance = (name,phoneNo,token) => {

@@ -1,9 +1,9 @@
-import React from 'react';
-const CompanyDetail = React.lazy(() => import('../views/company/viewCompanyDetail'))
-const PackageDetail = React.lazy(() => import('../views/packages/viewPackageDetail'))
-const AddInstance = React.lazy(() => import('../views/instance/add'))
-const ConnectInstance = React.lazy(() => import('../views/instance/connectInstance'))
-
+import React,{lazy, Suspense} from 'react';
+const CompanyDetail = lazy(() => import('../views/company/viewCompanyDetail'))
+const PackageDetail = lazy(() => import('../views/packages/viewPackageDetail'))
+const AddInstance = lazy(() => import('../views/instance/add'))
+const ConnectInstance = lazy(() => import('../views/instance/connectInstance'))
+import Loader from './Loader';
 import {
   CButton,
   CModal,
@@ -20,23 +20,22 @@ const Modal = ({ visible, onClose, details }) => {
   let pageName = '';
   let dynemicData = '';
   let size = '';
-  
-  if(details != undefined){
+
+  if(details != null){
     title = details.title;
     id = details.id;
     size = details.size;
     pageName = details.pageName;
     if(pageName == 'companyDetail'){
-      dynemicData = <CompanyDetail id={id} />;
+      dynemicData = <Suspense fallback={Loader}><CompanyDetail id={id} /></Suspense>
     }else if(pageName == 'packageDetail'){
-      dynemicData = <PackageDetail id={id} />;
+      dynemicData = <Suspense fallback={Loader}><PackageDetail id={id} /></Suspense>
     }else if(pageName == 'addInstance'){
-      dynemicData = <AddInstance id={id} />
+      dynemicData = <Suspense fallback={Loader}><AddInstance id={id} /></Suspense>
     }else if(pageName == 'connectInstance'){
-      dynemicData = <ConnectInstance id={id} />
+      dynemicData = <Suspense fallback={Loader}><ConnectInstance id={id} /></Suspense>
     }
   }
-  
   return (
     <>
       <CModal size={size} visible={visible} onClose={onClose}>
@@ -46,11 +45,6 @@ const Modal = ({ visible, onClose, details }) => {
         <CModalBody id="modalDynemicData">
           {dynemicData}
         </CModalBody>
-        {/* <CModalFooter>
-          <CButton color="secondary" onClick={onClose}>
-            Close
-          </CButton>
-        </CModalFooter> */}
       </CModal>
     </>
   );

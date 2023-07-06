@@ -1,3 +1,2 @@
-2023/07/05-12:50:38.880 6270 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/File System/Origins/MANIFEST-000001
-2023/07/05-12:50:38.881 6270 Recovering log #3
-2023/07/05-12:50:38.881 6270 Reusing old log /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/File System/Origins/000003.log 
+2023/07/06-06:04:13.357 3165 Creating DB /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/File System/Origins since it was missing.
+2023/07/06-06:04:13.361 3165 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-64a2ea7b629c74dcce808cc1/Default/File System/Origins/MANIFEST-000001
