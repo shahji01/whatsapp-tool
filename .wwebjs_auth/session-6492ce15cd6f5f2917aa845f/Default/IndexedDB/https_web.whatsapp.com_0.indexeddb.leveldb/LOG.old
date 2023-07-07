@@ -1,53 +1,49 @@
-2023/07/07-07:41:01.692 c3f4 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-6492ce15cd6f5f2917aa845f/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/07/07-07:41:01.693 c3f4 Recovering log #808
-2023/07/07-07:41:01.757 c3f4 Reusing old log /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-6492ce15cd6f5f2917aa845f/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000808.log 
-2023/07/07-07:41:02.891 c426 Compacting 1@1 + 9@2 files
-2023/07/07-07:41:03.019 c426 Generated table #811@1: 54299 keys, 2212667 bytes
-2023/07/07-07:41:03.107 c426 Generated table #812@1: 60229 keys, 2222696 bytes
-2023/07/07-07:41:03.159 c426 Generated table #813@1: 14527 keys, 2159019 bytes
-2023/07/07-07:41:03.195 c426 Generated table #814@1: 2373 keys, 2149442 bytes
-2023/07/07-07:41:03.258 c426 Generated table #815@1: 14291 keys, 2199534 bytes
-2023/07/07-07:41:03.342 c426 Generated table #816@1: 33497 keys, 2241098 bytes
-2023/07/07-07:41:03.406 c426 Generated table #817@1: 47144 keys, 2180540 bytes
-2023/07/07-07:41:03.508 c426 Generated table #818@1: 101725 keys, 2251949 bytes
-2023/07/07-07:41:03.540 c426 Generated table #819@1: 29157 keys, 653689 bytes
-2023/07/07-07:41:03.540 c426 Compacted 1@1 + 9@2 files => 18270634 bytes
-2023/07/07-07:41:03.541 c426 compacted to: files[ 0 0 9 0 0 0 0 ]
-2023/07/07-07:41:03.542 c426 Delete type=2 #800
-2023/07/07-07:41:03.542 c426 Delete type=2 #806
-2023/07/07-07:41:03.542 c426 Delete type=2 #804
-2023/07/07-07:41:03.542 c426 Delete type=2 #809
-2023/07/07-07:41:03.542 c426 Delete type=2 #807
-2023/07/07-07:41:03.542 c426 Delete type=2 #803
-2023/07/07-07:41:03.542 c426 Delete type=2 #805
-2023/07/07-07:41:03.542 c426 Delete type=2 #801
-2023/07/07-07:41:03.542 c426 Delete type=2 #802
-2023/07/07-07:41:03.542 c426 Delete type=2 #799
-2023/07/07-07:41:28.744 c3f4 Level-0 table #821: started
-2023/07/07-07:41:28.796 c3f4 Level-0 table #821: 775468 bytes OK
-2023/07/07-07:41:28.799 c3f4 Delete type=0 #808
-2023/07/07-07:41:28.965 c428 Compacting 1@1 + 9@2 files
-2023/07/07-07:41:29.170 c428 Generated table #822@1: 53723 keys, 2212191 bytes
-2023/07/07-07:41:29.361 c428 Generated table #823@1: 60560 keys, 2223443 bytes
-2023/07/07-07:41:29.430 c428 Generated table #824@1: 13511 keys, 2154569 bytes
-2023/07/07-07:41:29.491 c428 Generated table #825@1: 2456 keys, 2150376 bytes
-2023/07/07-07:41:29.656 c428 Generated table #826@1: 14724 keys, 2201976 bytes
-2023/07/07-07:41:29.775 c428 Generated table #827@1: 32997 keys, 2236373 bytes
-2023/07/07-07:41:29.909 c428 Generated table #828@1: 49349 keys, 2184110 bytes
-2023/07/07-07:41:30.084 c428 Generated table #829@1: 101796 keys, 2254501 bytes
-2023/07/07-07:41:30.131 c428 Generated table #830@1: 26837 keys, 601741 bytes
-2023/07/07-07:41:30.131 c428 Compacted 1@1 + 9@2 files => 18219280 bytes
-2023/07/07-07:41:30.132 c428 compacted to: files[ 0 0 9 0 0 0 0 ]
-2023/07/07-07:41:30.132 c428 Delete type=2 #814
-2023/07/07-07:41:30.132 c428 Delete type=2 #821
-2023/07/07-07:41:30.132 c428 Delete type=2 #812
-2023/07/07-07:41:30.132 c428 Delete type=2 #818
-2023/07/07-07:41:30.133 c428 Delete type=2 #816
-2023/07/07-07:41:30.133 c428 Delete type=2 #819
-2023/07/07-07:41:30.133 c428 Delete type=2 #815
-2023/07/07-07:41:30.133 c428 Delete type=2 #813
-2023/07/07-07:41:30.133 c428 Delete type=2 #817
-2023/07/07-07:41:30.133 c428 Delete type=2 #811
-2023/07/07-07:45:51.582 c427 Level-0 table #832: started
-2023/07/07-07:45:51.622 c427 Level-0 table #832: 778673 bytes OK
-2023/07/07-07:45:51.625 c427 Delete type=0 #820
+2023/07/07-14:50:15.573 66a3 Reusing MANIFEST /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-6492ce15cd6f5f2917aa845f/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/07-14:50:15.573 66a3 Recovering log #1204
+2023/07/07-14:50:15.696 66a3 Reusing old log /home/arwaj/sfr/whatsapp-tool/.wwebjs_auth/session-6492ce15cd6f5f2917aa845f/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/001204.log 
+2023/07/07-14:50:45.470 66cb Level-0 table #1217: started
+2023/07/07-14:50:45.499 66cb Level-0 table #1217: 1004596 bytes OK
+2023/07/07-14:50:45.502 66cb Delete type=0 #1204
+2023/07/07-14:50:48.032 66cb Compacting 1@1 + 9@2 files
+2023/07/07-14:50:48.150 66cb Generated table #1218@1: 65065 keys, 2232188 bytes
+2023/07/07-14:50:48.231 66cb Generated table #1219@1: 55887 keys, 2215309 bytes
+2023/07/07-14:50:48.281 66cb Generated table #1220@1: 25648 keys, 2178527 bytes
+2023/07/07-14:50:48.363 66cb Generated table #1221@1: 1885 keys, 2143312 bytes
+2023/07/07-14:50:48.413 66cb Generated table #1222@1: 6789 keys, 2165722 bytes
+2023/07/07-14:50:48.495 66cb Generated table #1223@1: 32533 keys, 2259773 bytes
+2023/07/07-14:50:48.551 66cb Generated table #1224@1: 25953 keys, 2166260 bytes
+2023/07/07-14:50:48.653 66cb Generated table #1225@1: 101656 keys, 2253553 bytes
+2023/07/07-14:50:48.712 66cb Generated table #1226@1: 61601 keys, 1373965 bytes
+2023/07/07-14:50:48.712 66cb Compacted 1@1 + 9@2 files => 18988609 bytes
+2023/07/07-14:50:48.714 66cb compacted to: files[ 0 0 9 0 0 0 0 ]
+2023/07/07-14:50:48.715 66cb Delete type=2 #1209
+2023/07/07-14:50:48.715 66cb Delete type=2 #1208
+2023/07/07-14:50:48.715 66cb Delete type=2 #1212
+2023/07/07-14:50:48.715 66cb Delete type=2 #1211
+2023/07/07-14:50:48.715 66cb Delete type=2 #1217
+2023/07/07-14:50:48.715 66cb Delete type=2 #1210
+2023/07/07-14:50:48.715 66cb Delete type=2 #1213
+2023/07/07-14:50:48.715 66cb Delete type=2 #1206
+2023/07/07-14:50:48.715 66cb Delete type=2 #1207
+2023/07/07-14:50:48.715 66cb Delete type=2 #1214
+2023/07/07-14:54:59.158 66a2 Level-0 table #1228: started
+2023/07/07-14:54:59.196 66a2 Level-0 table #1228: 757794 bytes OK
+2023/07/07-14:54:59.199 66a2 Delete type=0 #1216
+2023/07/07-14:56:04.878 66ca Compacting 1@1 + 7@2 files
+2023/07/07-14:56:04.984 66ca Generated table #1229@1: 65117 keys, 2231755 bytes
+2023/07/07-14:56:05.066 66ca Generated table #1230@1: 55841 keys, 2214959 bytes
+2023/07/07-14:56:05.118 66ca Generated table #1231@1: 25722 keys, 2180838 bytes
+2023/07/07-14:56:05.144 66ca Generated table #1232@1: 1885 keys, 2143312 bytes
+2023/07/07-14:56:05.181 66ca Generated table #1233@1: 6789 keys, 2165722 bytes
+2023/07/07-14:56:05.270 66ca Generated table #1234@1: 32533 keys, 2260009 bytes
+2023/07/07-14:56:05.336 66ca Generated table #1235@1: 25953 keys, 2166158 bytes
+2023/07/07-14:56:05.336 66ca Compacted 1@1 + 7@2 files => 15362753 bytes
+2023/07/07-14:56:05.338 66ca compacted to: files[ 0 0 9 0 0 0 0 ]
+2023/07/07-14:56:05.338 66ca Delete type=2 #1220
+2023/07/07-14:56:05.338 66ca Delete type=2 #1224
+2023/07/07-14:56:05.338 66ca Delete type=2 #1221
+2023/07/07-14:56:05.338 66ca Delete type=2 #1218
+2023/07/07-14:56:05.338 66ca Delete type=2 #1223
+2023/07/07-14:56:05.338 66ca Delete type=2 #1228
+2023/07/07-14:56:05.339 66ca Delete type=2 #1222
+2023/07/07-14:56:05.339 66ca Delete type=2 #1219

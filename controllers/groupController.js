@@ -10,26 +10,30 @@ const findGroupByName = async function(id,name) {
   }
 
 const createGroup = async (req, res) => {4
-    const {groupName, contactName} = req.body
-    const client = await global.session.find(sess => sess.id == req.instance._id)?.client
-    const group = await findGroupByName(req.instance._id,groupName);
-    if(group){
-        res.send({'status':'failed','message':'Something went wrong! Group is already exits...'})
-    }else{
-        client.getContacts().then((contacts) => {
-            const contactToAdd = contacts.find(
-              // Finding the contact Id using the contact's name
-              (contact) => contact.name === contactName
-            );
-            if (contactToAdd) {
-                client.createGroup(groupName,[contactToAdd.id._serialized]) // Pass an array of contact IDs [id1, id2, id3 .....]
-                .then(() =>
-                    res.status(200).json({status:200,data:`Successfully Create Group and added ${contactName} to the group ${groupName}`})
+    try{
+        const {groupName, contactName} = req.body
+        const client = await global.session.find(sess => sess.id == req.instance._id)?.client
+        const group = await findGroupByName(req.instance._id,groupName);
+        if(group){
+            res.send({'status':400,error:'Something went wrong! Group is already exits...'})
+        }else{
+            client.getContacts().then((contacts) => {
+                const contactToAdd = contacts.find(
+                // Finding the contact Id using the contact's name
+                (contact) => contact.name === contactName
                 );
-            } else {
-                res.status(400).json({status:400, error:'Something went wrong! Contact not found...'})
-            }
-        });
+                if (contactToAdd) {
+                    client.createGroup(groupName,[contactToAdd.id._serialized]) // Pass an array of contact IDs [id1, id2, id3 .....]
+                    .then(() =>
+                        res.send({status:200,data:`Successfully Create Group and added ${contactName} to the group ${groupName}`})
+                    );
+                } else {
+                    res.send({status:400, error:'Something went wrong! Contact not found...'})
+                }
+            });
+        }
+    } catch (err){
+        return res.status(400).json({status:400, error:err.message});
     }
 }
 
@@ -82,29 +86,33 @@ const groupList = async (req, res) => {
 }
 
 const sendMsgGroup = async (req, res) => {
-    let groupName = req.params.groupName;
-    let message = req.body.message;
+    try{
+        let groupName = req.body.groupName;
+        let message = req.body.message;
 
-    if (groupName == undefined || message == undefined) {
-        return res.send({ status: "error", message: "please enter valid groupName and message" })
-    } else {
-        const group = await findGroupByName(req.instance._id,groupName);
-        if(group){
-            const client = await global.session.find(sess => sess.id == req.instance._id)?.client
-            client.getChats().then((data) => {
-                data.forEach(chat => {
-                    if (chat.id.server === "g.us" && chat.name === groupName) {
-                        client.sendMessage(chat.id._serialized, message).then((response) => {
-                            if (response.id.fromMe) {
-                                return res.send({ status: 'success', message: `Message successfully send to ${groupName}` })
-                            }
-                        });
-                    }
-                });     
-            });
-        }else{
-            res.send({'status':'failed','message':'Something went wrong! Group is not exits plz create group...'})
+        if (groupName == undefined || message == undefined) {
+            return res.send({ status: "error", message: "please enter valid groupName and message" })
+        } else {
+            const group = await findGroupByName(req.instance._id,groupName);
+            if(group){
+                const client = await global.session.find(sess => sess.id == req.instance._id)?.client
+                const data = await client.getChats().then((data) => {
+                    data.forEach(chat => {
+                        if (chat.id.server === "g.us" && chat.name === groupName) {
+                            client.sendMessage(chat.id._serialized, message).then((response) => {
+                                if (response.id.fromMe) {
+                                    return res.status(200).json({status:200, message: `Message successfully send to ${groupName}` })
+                                }
+                            });
+                        }
+                    });     
+                });
+            }else{
+                return res.status(400).json({status:400, error:'Something went wrong! Group is not exits plz create group...'});
+            }
         }
+    } catch (err){
+        return res.status(400).json({status:400, error:err.message});
     }
 }
 
@@ -173,12 +181,23 @@ const addParticipantInGroup = async (req, res) => {
 }
 
 const removeGroup = async (req, res) => {
-    const {groupName} = req.body
-    if(groupName == ''){
-        return res.send({ status: "error", message: "please enter valid groupName" })
-    }else{
-        console.log(groupName);
+    try{
+        const {groupName} = req.body
+        if(groupName == ''){
+            return res.send({ status: 400, error: "please enter valid groupName" })
+        }else{
+            const client = await global.session.find(sess => sess.id == req.instance._id)?.client
+            console.log(client);
+            // const data = await client.(groupName);
+            // console.log(data);
+        }
+
+
+        return res.status(200).json({status:200,data:'Successfully Remove Group'});
+    } catch (err){
+        return res.status(400).json({status:400, error:err.message});
     }
+    
 }
 
 

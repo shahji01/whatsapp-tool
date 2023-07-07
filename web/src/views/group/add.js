@@ -58,11 +58,12 @@ const GroupForm = () => {
         }
       })
     }catch (err){
-
+      setErrorMessage(<div class="alert alert-danger show">{err.response.data.error}</div>)
     }
   }
   return (
     <>
+        {errorMessage}
         <CCard className="mb-4">
             <CCardHeader>
                 Make New Group

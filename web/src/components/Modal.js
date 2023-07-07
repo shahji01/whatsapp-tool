@@ -3,6 +3,7 @@ const CompanyDetail = lazy(() => import('../views/company/viewCompanyDetail'))
 const PackageDetail = lazy(() => import('../views/packages/viewPackageDetail'))
 const AddInstance = lazy(() => import('../views/instance/add'))
 const ConnectInstance = lazy(() => import('../views/instance/connectInstance'))
+const SendMsgInGroup = lazy(() => import('../views/group/sendMsgInGroup'))
 import Loader from './Loader';
 import {
   CButton,
@@ -34,6 +35,8 @@ const Modal = ({ visible, onClose, details }) => {
       dynemicData = <Suspense fallback={Loader}><AddInstance id={id} /></Suspense>
     }else if(pageName == 'connectInstance'){
       dynemicData = <Suspense fallback={Loader}><ConnectInstance id={id} /></Suspense>
+    }else if(pageName == 'sendMsgInGroup'){
+      dynemicData = <Suspense fallback={Loader}><SendMsgInGroup id={id} /></Suspense>
     }
   }
   return (

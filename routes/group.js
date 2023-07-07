@@ -7,7 +7,7 @@ router.post('/create-group',requireMsgAuth, createGroup)
 router.get('/group-list',requireMsgAuth, groupList)
 router.get('/contactList',requireMsgAuth, contactList)
 
-router.post('/send-msg-group/:groupName',requireMsgAuth, sendMsgGroup);
+router.post('/send-msg-group',requireMsgAuth, sendMsgGroup);
 router.post('/add-participant-in-group',requireMsgAuth, addParticipantInGroup)
 router.post('/remove-participant-in-group',requireMsgAuth, removeParticipantInGroup)
 router.patch('/remove-group',requireMsgAuth,removeGroup)
