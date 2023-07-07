@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom'
 import MessageAdd from '../message/add'
 import MessageList from '../message/list'
 
+import GroupAdd from '../group/add'
+import GroupList from '../group/list'
+
 
 import { 
   CAlert,
@@ -15,8 +18,10 @@ import {
   CTabPane
    } from '@coreui/react'
    const tabs = [
-    { component: MessageAdd, name : 'Add New Message',active: 1 },
+    { component: MessageAdd, name : 'Send New Message',active: 1 },
     { component: MessageList, name : 'Message List',active:2 },
+    { component: GroupAdd, name : 'Make New Group',active: 3 },
+    { component: GroupList, name : 'Group List',active:4 },
     // { component: Tab3, isDisabled: true },
     // { component: Tab4 },
   ];

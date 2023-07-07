@@ -3815,5 +3815,35 @@
     "createdAt": "2023-07-03T15:36:34.107Z",
     "updatedAt": "2023-07-03T15:38:10.444Z",
     "__v": 0
+  },
+  {
+    "_id": "64a7b24c4804e7c718e32349",
+    "companyId": "6492ce15cd6f5f2917aa845e",
+    "instanceId": "6492ce15cd6f5f2917aa845f",
+    "sender": "923145017055",
+    "recipient": "923145017055",
+    "message": "asdfasdf",
+    "whatsappRefId": "",
+    "userRefId": "155",
+    "status": "Pending",
+    "webhookStatus": "false",
+    "createdAt": "2023-07-07T06:35:56.647Z",
+    "updatedAt": "2023-07-07T06:35:56.647Z",
+    "__v": 0
+  },
+  {
+    "_id": "64a7b24c4804e7c718e32349",
+    "companyId": "6492ce15cd6f5f2917aa845e",
+    "instanceId": "6492ce15cd6f5f2917aa845f",
+    "sender": "923145017055",
+    "recipient": "923145017055",
+    "message": "asdfasdf",
+    "whatsappRefId": "3EB03765CDF463CDC2EC6C",
+    "userRefId": "155",
+    "status": "Read",
+    "webhookStatus": "false",
+    "createdAt": "2023-07-07T06:35:56.647Z",
+    "updatedAt": "2023-07-07T06:36:02.022Z",
+    "__v": 0
   }
 ]
