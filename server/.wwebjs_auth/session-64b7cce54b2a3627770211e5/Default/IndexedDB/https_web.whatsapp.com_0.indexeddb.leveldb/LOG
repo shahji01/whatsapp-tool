@@ -1,0 +1,28 @@
+2023/07/22-11:53:18.017 4503 Reusing MANIFEST /home/arwaj/whatsapp-tool/server/.wwebjs_auth/session-64b7cce54b2a3627770211e5/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/07/22-11:53:18.018 4503 Recovering log #1652
+2023/07/22-11:53:18.061 4503 Reusing old log /home/arwaj/whatsapp-tool/server/.wwebjs_auth/session-64b7cce54b2a3627770211e5/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/001652.log 
+2023/07/22-11:53:44.904 4534 Level-0 table #1665: started
+2023/07/22-11:53:44.948 4534 Level-0 table #1665: 962121 bytes OK
+2023/07/22-11:53:44.953 4534 Delete type=0 #1652
+2023/07/22-11:53:45.095 4534 Compacting 1@1 + 9@2 files
+2023/07/22-11:53:45.299 4534 Generated table #1666@1: 76760 keys, 2279156 bytes
+2023/07/22-11:53:45.580 4534 Generated table #1667@1: 44592 keys, 2200289 bytes
+2023/07/22-11:53:45.850 4534 Generated table #1668@1: 58382 keys, 2224232 bytes
+2023/07/22-11:53:45.975 4534 Generated table #1669@1: 2567 keys, 2140183 bytes
+2023/07/22-11:53:46.103 4534 Generated table #1670@1: 3476 keys, 2161259 bytes
+2023/07/22-11:53:46.330 4534 Generated table #1671@1: 29663 keys, 2251738 bytes
+2023/07/22-11:53:46.503 4534 Generated table #1672@1: 25717 keys, 2173277 bytes
+2023/07/22-11:53:46.767 4534 Generated table #1673@1: 103949 keys, 2255457 bytes
+2023/07/22-11:53:46.913 4534 Generated table #1674@1: 34751 keys, 759467 bytes
+2023/07/22-11:53:46.913 4534 Compacted 1@1 + 9@2 files => 18445058 bytes
+2023/07/22-11:53:46.945 4534 compacted to: files[ 0 0 9 0 0 0 0 ]
+2023/07/22-11:53:46.946 4534 Delete type=2 #1658
+2023/07/22-11:53:46.946 4534 Delete type=2 #1662
+2023/07/22-11:53:46.946 4534 Delete type=2 #1660
+2023/07/22-11:53:46.946 4534 Delete type=2 #1656
+2023/07/22-11:53:46.946 4534 Delete type=2 #1661
+2023/07/22-11:53:46.946 4534 Delete type=2 #1654
+2023/07/22-11:53:46.946 4534 Delete type=2 #1657
+2023/07/22-11:53:46.946 4534 Delete type=2 #1655
+2023/07/22-11:53:46.946 4534 Delete type=2 #1659
+2023/07/22-11:53:46.946 4534 Delete type=2 #1665
