@@ -3,9 +3,9 @@ const qrcode = require('qrcode')
 const { createCanvas, loadImage } = require("canvas");
 const Company = require('../models/companyModel')
 const messageModel = require('../models/messageModel')
+const {sendReq} = require('../helpers/commonFunction.js')
 const fs = require('fs')
 const url = require('url')
-const http = require("http")
 const { log } = require('console')
 
 const setSession = function(session) {
@@ -68,37 +68,7 @@ const createConnection = async function(id) {
 
 	client.initialize()
 	
-	const sendReq = (option, data) => {
-
-		postData = JSON.stringify(data)
-		console.log(data);
-		console.log(option);
 	
-		const options = {
-			hostname: option.hostname,
-			port: option.port,
-			path: option.path,
-			method: option.method,
-			headers: {
-				'content-type': 'application/json',
-				'accept': 'application/json',
-			}
-		}
-		const req = http.request(options, (res) => {
-			res.setEncoding('utf8')
-			res.on('data', (chunk) => {
-				console.log(`BODY: ${chunk}`)
-			})
-			res.on('end', () => {
-				console.log('No more data in response.')
-			})
-		})
-		req.on('error', (e) => {
-			console.error(`problem with request: ${e.message}`)
-		})
-		req.write(postData)
-		req.end()
-	}
 	
 	client.on('message_ack', async (msg,status) => {
 		let msgID = msg.id.id
@@ -106,14 +76,15 @@ const createConnection = async function(id) {
 		if(messageDetail){
 			const companyDetail = await Company.find({'instances._id':messageDetail.instanceId})
 			const referenceNumber = messageDetail.userRefId //we will fetch this from db
-			const parseURL = url.parse(companyDetail[0].webhook, true) //we will fetch this from db
+			//const parseURL = url.parse(companyDetail[0].webhook, true) //we will fetch this from db
+			const parseURL = url.parse('http://localhost:9515/api/message/updateMsgStatus', true) //we will fetch this from db
 			const data = {
 				id: msgID,
 				referenceNumber: referenceNumber,
 				status: msg.ack
 			}
 			const options = {
-				hostname:parseURL.hostname,
+				host:parseURL.hostname,
 				port:parseURL.port,
 				path:parseURL.path,
 				method : 'POST'

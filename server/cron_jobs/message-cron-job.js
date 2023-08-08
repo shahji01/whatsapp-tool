@@ -8,7 +8,7 @@ exports.initScheduledJobs = () => {
         sendInstanceMessage()
     });
     
-    nodeCron.schedule("*/2 * * * *", function () {
+    nodeCron.schedule("*/3 * * * *", function () {
         sendWebhookMessage()
     });
 }

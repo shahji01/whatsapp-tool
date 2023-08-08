@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { MDBDataTable, MDBCard, MDBCardBody } from 'mdbreact';
 import { 
     CCard,
     CCardHeader,
@@ -9,8 +10,8 @@ import { baseUrl } from 'src/components/CommonComponent';
 
 
 const MessageList = () => {
-  
   const [messageList,setMessageList] = useState([]);
+  
   const getMessageList = async () => {
     const response = await axios.get(''+baseUrl+'/message/instanceWiseMsgList',{
         headers: {
@@ -24,47 +25,59 @@ const MessageList = () => {
         }
       })
   }
+  
   useEffect(() => {
     getMessageList();
   },[]);
+  const detail = [];
+  messageList?.map((value, key) => {
+    detail.push({
+      sender:value.sender,
+      recipient:value.recipient,
+      messageTwo:value.message,
+      statusTwo:value.status,
+    })
+  });
+
+  const data = {
+    columns: [
+      {
+        label: "Sender",
+        field: "sender",
+        sort: "asc"
+      },
+      {
+        label: "Receiver",
+        field: "recipient",
+        sort: "asc"
+      },
+      {
+        label: "Message",
+        field: "messageTwo",
+        sort: "asc"
+      },
+      {
+        label: "Status",
+        field: "statusTwo",
+        sort: "asc"
+      }
+    ],
+    rows: detail
+  };
   return (
     <>
-        <CCard className="mb-4">
+        <MDBCard className="mb-4">
             <CCardHeader>
                 Messaage List Instance Wise
             </CCardHeader>
-            <CCardBody>
-              <div class="table-responsive text-nowrap">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th class="text-center">S.No</th>
-                      <th class="text-center">Sender</th>
-                      <th class="text-center">Receiver</th>
-                      <th class="text-center">Message</th>
-                      <th class="text-center">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  {
-                      messageList?.map((value, key) => {
-                      return (
-                          
-                          <tr key={key}>
-                              <td class="text-center">{key+1}</td>
-                              <td class="text-center">{value.sender}</td>
-                              <td class="text-center">{value.recipient}</td>
-                              <td>{value.message}</td>
-                              <td class="text-center">{value.status}</td>
-                          </tr>
-                      )
-                      })
-                  }
-                  </tbody>
-                </table>
-              </div>
-            </CCardBody>
-        </CCard>
+            <MDBCardBody>
+              <MDBDataTable
+                striped
+                bordered
+                data={data}
+              />
+            </MDBCardBody>
+        </MDBCard>
     </>
   )
 }

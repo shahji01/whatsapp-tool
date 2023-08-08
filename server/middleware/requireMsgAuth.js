@@ -4,6 +4,7 @@ const Company = require('../models/companyModel')
 const messageModel = require('../models/messageModel')
 
 const requireMsgAuth = async (req, res, next) => {
+    
     const {authorization} = req.headers;
     if (!authorization) {
         return res.status(401).json({status:401,error:'Authorization token required...'})

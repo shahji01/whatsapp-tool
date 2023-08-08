@@ -52,7 +52,7 @@ const MessageForm = () => {
     event.preventDefault();
     try{
       const { recipient, message } = event.target;
-      const postData = JSON.stringify({ recipient: recipient.value,
+      const postData = JSON.stringify({ recipientTwo: recipient.value,
         instanceId: localStorage.getItem('instanceToken'),
         message: message.value,
         referenceNumber:155,
@@ -66,16 +66,33 @@ const MessageForm = () => {
         },
       }).then(res => {
         if(res.data.status == 200){
-          window.location.reload(false);
+          var numberError = [];
+          {res.data.data.map((detail) => {
+            if(detail.status == 'False'){
+              numberError.push(detail.recipient);
+            }
+          })}
+          console.log(numberError);
+          if(numberError.length > 0){
+            setErrorMessage(<div class="alert alert-danger show">
+              {'These number is not registered...  '}
+              {numberError.map((number) => {
+                return number+' , ';
+              })}
+            </div>)
+          }else{
+            window.location.reload(false);
+          }
         }
       })
     } catch(err){
-      setErrorMessage(<div class="alert alert-danger show">
-          {err.response.data.error+'  '}
-          {err.response.data.numberError.map((number) => {
-            return number+'   ';
-          })}
-        </div>)
+      //setErrorMessage(<div class="alert alert-danger show">{err}</div>)
+      // setErrorMessage(<div class="alert alert-danger show">
+      //     {err.response.data.error+'  '}
+      //     {err.response.data.numberError.map((number) => {
+      //       return number+'   ';
+      //     })}
+      //   </div>)
     }
   };
 

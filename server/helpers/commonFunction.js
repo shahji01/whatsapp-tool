@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const { log } = require("console");
+const http = require("http")
 
 function sendResetPasswordMail(num, email, callback) {
     var transporter = nodemailer.createTransport({
@@ -56,10 +57,40 @@ function fsRemoveRecord (path, id){
     fs.writeFileSync( path, JSON.stringify(dataArray, null, 2), "utf8" )
 }
 
+const sendReq = (option, data) => {
+    postData = JSON.stringify(data);
+    const options = {
+        host: option.host,
+        port: option.port,
+        path: option.path,
+        method: option.method,
+        headers: {
+            'content-type': 'application/json',
+            'accept': 'application/json',
+        }
+    }
+    const req = http.request(options, (res) => {
+        res.setEncoding('utf8')
+        res.on('data', (chunk) => {
+            console.log(`BODY: ${chunk}`)
+        })
+        res.on('end', () => {
+            console.log('No more data in response.')
+        })
+    })
+    req.on('error', (e) => {
+        console.log(e);
+        console.error(`problem with request: ${e.message}`)
+    })
+    req.write(postData)
+    req.end()
+}
+
 module.exports = {
     fsReadAndWrite,
     fsGetData,
     fsSingleDataById,
     fsRemoveRecord,
     sendResetPasswordMail,
+    sendReq
 }
